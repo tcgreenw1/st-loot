@@ -348,4 +348,3 @@ footer > small { grid-column: 1/-1; padding-top: 25px; border-top: 1px solid rgb
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-

@@ -87,4 +87,3 @@ export const lootBoxes: LootBox[] = [
     prizeCount: 8,
   },
 ]
-

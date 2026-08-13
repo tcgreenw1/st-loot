@@ -25,4 +25,3 @@ The intended MVP address is `https://stloot.cofounderplus.com`.
 - Payments stay disabled until product, fulfillment, accounting, and legal reviews are complete.
 - Charity proceeds are calculated from the append-only impact ledger, not from marketing estimates.
 - St. Jude Children's Research Hospital is a placeholder beneficiary and is not presented as a formal partner.
-
