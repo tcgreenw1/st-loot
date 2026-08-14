@@ -1,89 +1,102 @@
+export type PrizePreview = {
+  name: string
+  value: string
+  rarity: 'Common' | 'Rare' | 'Ultra rare'
+}
+
 export type LootBox = {
   id: string
   name: string
-  eyebrow: string
+  kicker: string
   description: string
   price: number
   value: string
-  family: 'Fresh' | 'Warm' | 'Rare'
+  family: 'Discovery' | 'Signature' | 'Rare'
+  image: string
   accent: string
+  glow: string
   featured?: boolean
-  notes: string[]
   prizeCount: number
+  impactEstimate: string
+  prizes: PrizePreview[]
 }
 
 export const lootBoxes: LootBox[] = [
   {
-    id: 'discovery-drop',
-    name: 'Discovery Drop',
-    eyebrow: 'The first spritz',
-    description: 'A guaranteed fragrance discovery from an emerging perfume house.',
+    id: 'discovery-pulse',
+    name: 'Discovery Pulse',
+    kicker: 'Start here',
+    description: 'Sample sets and travel sprays from the first partner drop.',
     price: 25,
-    value: '$25–$60 value',
-    family: 'Fresh',
-    accent: '#c8efff',
-    notes: ['Citrus', 'Mineral', 'Clean musk'],
+    value: '$25–$65',
+    family: 'Discovery',
+    image: '/assets/discovery-pulse.jpg',
+    accent: '#21b8ff',
+    glow: 'rgba(22, 174, 255, .42)',
     prizeCount: 12,
+    impactEstimate: '$6.75 est.',
+    prizes: [
+      { name: 'Discovery set', value: '$25', rarity: 'Common' },
+      { name: 'Travel spray', value: '$45', rarity: 'Rare' },
+      { name: 'Full-size bottle', value: '$65', rarity: 'Ultra rare' },
+    ],
   },
   {
-    id: 'signature-vault',
-    name: 'Signature Vault',
-    eyebrow: 'Most loved',
-    description: 'Full bottles, travel sets, and limited discovery collections.',
+    id: 'blue-hour',
+    name: 'Blue Hour',
+    kicker: 'Most opened',
+    description: 'Fresh signatures, full bottles, and after-dark favorites.',
     price: 50,
-    value: '$50–$140 value',
-    family: 'Warm',
-    accent: '#d8ff62',
+    value: '$50–$150',
+    family: 'Signature',
+    image: '/assets/blue-hour.jpg',
+    accent: '#4a7dff',
+    glow: 'rgba(52, 104, 255, .45)',
     featured: true,
-    notes: ['Amber', 'Sandalwood', 'Vanilla'],
     prizeCount: 18,
+    impactEstimate: '$14.25 est.',
+    prizes: [
+      { name: 'Travel duo', value: '$50', rarity: 'Common' },
+      { name: 'Signature bottle', value: '$95', rarity: 'Rare' },
+      { name: 'Limited parfum', value: '$150', rarity: 'Ultra rare' },
+    ],
   },
   {
-    id: 'collectors-edit',
-    name: "Collector's Edit",
-    eyebrow: 'Small batch',
-    description: 'Rare editions and premium bottles selected for fragrance collectors.',
-    price: 100,
-    value: '$100–$300 value',
-    family: 'Rare',
-    accent: '#d7c7ff',
-    notes: ['Oud', 'Saffron', 'Dark rose'],
-    prizeCount: 10,
-  },
-  {
-    id: 'daylight-set',
-    name: 'Daylight Set',
-    eyebrow: 'Easy everyday',
-    description: 'Bright, versatile fragrances designed for the everyday rotation.',
-    price: 35,
-    value: '$35–$85 value',
-    family: 'Fresh',
-    accent: '#ffe6a7',
-    notes: ['Bergamot', 'Neroli', 'Cedar'],
-    prizeCount: 14,
-  },
-  {
-    id: 'after-hours',
-    name: 'After Hours',
-    eyebrow: 'A little bolder',
-    description: 'Statement scents, rich woods, and memorable night-out bottles.',
-    price: 65,
-    value: '$65–$175 value',
-    family: 'Warm',
-    accent: '#ffb8a7',
-    notes: ['Tobacco', 'Tonka', 'Leather'],
+    id: 'neon-bloom',
+    name: 'Neon Bloom',
+    kicker: 'New drop',
+    description: 'Radiant florals, modern musks, and electric statement scents.',
+    price: 75,
+    value: '$75–$220',
+    family: 'Signature',
+    image: '/assets/neon-bloom.jpg',
+    accent: '#8b6dff',
+    glow: 'rgba(126, 82, 255, .42)',
     prizeCount: 16,
+    impactEstimate: '$20.50 est.',
+    prizes: [
+      { name: 'Floral discovery edit', value: '$75', rarity: 'Common' },
+      { name: 'Sculptural bottle', value: '$135', rarity: 'Rare' },
+      { name: 'Collector edition', value: '$220', rarity: 'Ultra rare' },
+    ],
   },
   {
-    id: 'atelier-reserve',
-    name: 'Atelier Reserve',
-    eyebrow: 'By invitation',
-    description: 'A rotating edit of hard-to-find bottles from independent perfumers.',
+    id: 'midnight-atelier',
+    name: 'Midnight Atelier',
+    kicker: 'Collector drop',
+    description: 'Small-batch parfum and rare bottles for serious collectors.',
     price: 150,
-    value: '$150–$450 value',
+    value: '$150–$500',
     family: 'Rare',
-    accent: '#bdebd2',
-    notes: ['Incense', 'Iris', 'Resin'],
+    image: '/assets/midnight-atelier.jpg',
+    accent: '#d7b36a',
+    glow: 'rgba(59, 93, 255, .38)',
     prizeCount: 8,
+    impactEstimate: '$43.00 est.',
+    prizes: [
+      { name: 'Atelier parfum', value: '$150', rarity: 'Common' },
+      { name: 'Numbered bottle', value: '$285', rarity: 'Rare' },
+      { name: 'Archive edition', value: '$500', rarity: 'Ultra rare' },
+    ],
   },
 ]
